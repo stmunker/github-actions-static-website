@@ -10,23 +10,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Zeig mal
-        run: |
-          ls
-
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: NPM install
-        run: |
-          npm clean-install
+        run: npm clean-install
 
       - name: NPM build
-        run: |
-          npm run build
+        run: npm run build
 
       - name: Show dist folder recursive
-        run: |
-          ls -R dist/
+        run: ls -R dist/
