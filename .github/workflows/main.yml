@@ -7,14 +7,14 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Lass mal schauen
-        run: |
-          echo "Hello! It's me"
-          ls
-
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Zeig noch mal
+      - name: Zeig mal
         run: |
           ls
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
