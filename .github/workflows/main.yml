@@ -42,5 +42,8 @@ jobs:
           name: website
           path: dist
 
-      - name: Show dist folder recursive
-        run: ls -R dist/
+      - name: Show credentials
+        run: |
+          echo "${{ vars.BUCKET_NAME }}"
+          echo "${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
