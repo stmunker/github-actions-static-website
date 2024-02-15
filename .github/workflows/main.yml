@@ -18,3 +18,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: NPM install
+        run: |
+          npm clean-install
+
+      - name: NPM build
+        run: |
+          npm run build
+
+      - name: Show dist folder recursive
+        run: |
+          ls -R dist/
