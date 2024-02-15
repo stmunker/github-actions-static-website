@@ -11,3 +11,10 @@ jobs:
         run: |
           echo "Hello! It's me"
           ls
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Zeig noch mal
+        run: |
+          ls
